@@ -65,7 +65,7 @@ class Main {
 				}
 				currentMilestoneName = issue.milestone.title;
 				var cssClass = issue.milestone.state == "closed" ? "closed" : "open";
-				output.add('<div class="milestone">\n<h2 class="$cssClass">${issue.milestone.title}</h2>\n\n');
+				output.add('<div class="milestone">\n<h2 class="$cssClass">${issue.milestone.title} (${monthDate(issue.milestone.due_on)})</h2>\n\n');
 			}
 
 			var cssClass = "alert alert-danger";
