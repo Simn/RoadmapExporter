@@ -57,7 +57,8 @@ class Main {
 		var currentMilestoneName = "";
 
 		var output = new StringBuf();
-
+		output.add('<div class="section"><div class="container"><h1>Haxe Roadmap</h1>');
+		
 		for (issue in issues) {
 			if (issue.milestone.title != currentMilestoneName) {
 				if (currentMilestoneName != "") {
@@ -97,6 +98,7 @@ class Main {
 		}
 
 		output.add("</div>\n");
+		output.add('</div></div>');
 
 		return output.toString();
 	}
